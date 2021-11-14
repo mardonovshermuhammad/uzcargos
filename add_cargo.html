@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/my_style.css">
+    <link rel="stylesheet" href="css/asidde_style.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    .overlow{
+        overflow: scroll;
+        height: 60vh;
+    }
+    .size{
+      font-size: 200px;
+    }
+
+input[type=radio]:checked ~ label{
+  color: #007bff;
+}
+
+.uzunligi{
+    font-size: 12px;
+    margin-top: -8px;
+    transition: 300ms;
+    color: #e63889;
+}
+.fonsize{
+  font-size: 16px;
+}
+
+
+   
+</style>
+
+<body>
+    <nav class="my-navbar">
+        <div class="my-navbar__content">
+            <a href="#" class="nav__title">
+                <span class="material-icons-outlined">
+                    arrow_back
+                </span>
+                Yuk qo'shish
+            </a>
+            <ul class="my-navbar__actions">
+                <li class="my-navbar-items"><button type="button" class="my-btn"><span class="material-icons-outlined">
+                            add_ic_call
+                        </span>Yordam<span class="material-icons-outlined">
+                            keyboard_arrow_down
+                        </span></button></li>
+                <li class="my-navbar-items">
+                    <img class="lan" id="uz" src="images/flags/uzbekistan.png" alt="Uz">
+                    <img class="lan" id="ru" src="images/flags/russia.png" alt="Rus">
+                </li>
+                <li class="my-navbar-items">Axror Jo'rayev <i>owner</i></li>
+                <li class="my-navbar-items">
+                    <a href="#">
+                        Chiqish<span class="material-icons-outlined">
+                            logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="my-hidden-navbar__actions">
+                <li class="my-navbar-items"><button type="button" class="my-btn"><span class="material-icons-outlined">
+                            add_ic_call
+                        </span></button></li>
+                <li class="my-navbar-items">
+                    <img class="lan" id="langs" src="images/flags/lang.jpg" alt="Uz">
+                </li>
+                <li class="my-navbar-items">Axror Jo'rayev <i>owner</i></li>
+                <li class="my-navbar-items">
+                    <a href="#">
+                        Chiqish<span class="material-icons-outlined">
+                            logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="my-third-hidden-navbar__actions">
+                <li class="my-navbar-items"><button type="button" class="my-btn"><span class="material-icons-outlined">
+                            add_ic_call
+                        </span></button></li>
+                <li class="my-navbar-items">
+                    <img class="lan" id="langs" src="images/flags/lang.jpg" alt="Uz">
+                </li>
+                <li class="my-navbar-items">
+                    <img src="images/sender.png" alt="Sender">
+                    </i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <aside class="aside">
+        <div class="top-logo-side">
+            <p class="visible-logo">Uz Car<b>go</b>s</p>
+            <p class="hidden-logo"><b>GO</b></p>
+        </div>
+
+        <div class="aside-nav">
+            <a href="#" class="aside-status-side">
+                <img src="images/sender.png" alt="Sender">
+                <h4>Jo'natuvchi</h4>
+                <p>Statusni o'zgartirish</p>
+            </a>
+
+            <ul class="aside-list">
+                <li class="aside-list-items">
+                    <a href="my_cargo.html">
+                        <span class="material-icons-outlined">
+                            work_outline
+                        </span>
+                        Mening yuklarim
+                    </a>
+                </li>
+                <li class="aside-list-items active">
+                    <a href="add_cargo.html">
+                        <span class="material-icons-outlined">
+                            medical_services
+                        </span>
+                        Yuk qo'shish
+                    </a>
+                </li>
+                <li class="aside-list-items">
+                    <a href="#">
+                        <span class="material-icons-outlined">
+                            calculate
+                        </span>
+                        Masofani hisoblash
+                    </a>
+                </li>
+                <li class="aside-list-items">
+                    <a href="settings.html">
+                        <span class="material-icons-outlined">
+                            manage_accounts
+                        </span>
+                        Sozlamalar
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="main">
+        <div class="add-cargo-form">
+            <div class="card add-card">
+                <h2 class="add-cargo-h2"><b>Yo'nalish</b></h2>
+                <label for="from-date class=" form-label">Yetkazish vaqti</label>
+                <div class="row card-form-row">
+                    <div class="col-lg-2">
+                        <input type="text" class="form-control" id="from-date" placeholder="Yuklash vaqti"
+                            onfocus="this.type='date'">
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="text" class="form-control" id="to-date" placeholder="Yetkazish vaqti"
+                            onfocus="this.type='date'">
+                    </div>
+                </div>
+                <div class="row card-form-row">
+                    <div class="col-lg-5">
+                        <label for="from-place">Yuklash joyi</label>
+                        <div class="additional">
+                            <div class="input-div" style="position: relative;">
+                                <input type="text"  class="form-control" id="from-place"
+                               placeholder="Yuklash vaqti">
+                           <!-- <datalist id="from-place-data">
+                               list="from-place-data"
+                              <option value="1">
+                              <option value="2">
+                              <option value="3">
+                          </datalist> -->
+                          <!-- <a href="#"><i class="fas fa-trash-alt text-danger" style="position: absolute; top: 10px; right: 10px;"></i></a> -->
+                            </div>
+                        </div>
+                        <a href="#" class="add-field">
+                            <span class="material-icons-outlined">
+                                add_box
+                            </span>
+                            Qo'shimcha yuklash joyi
+                        </a>
+                    </div>
+                    <div class="col-lg-5">
+                        <label for="to-place">Yetkazish joyi</label>
+                        <div class="additional2">
+                            <div class="input-div2" style="position: relative;">
+                                <input type="text"  class="form-control" id="to-place"
+                                    placeholder="Yuklash vaqti">
+                                <!-- <datalist id="to-place-data">
+                                    list="to-place-data"
+                                    <option value="1">
+                                    <option value="2">
+                                    <option value="3">
+                                </datalist> -->
+                                <!-- <a href="#"><i class="fas fa-trash-alt text-danger" style="position: absolute; top: 10px; right: 10px;"></i></a> -->
+                            </div> 
+                        </div>
+                        <a href="#" class="add-field2 add-field ">
+                            <span class="material-icons-outlined">
+                                add_box
+                            </span>
+                            Qo'shimcha tushirish joyi
+                        </a>
+                    </div>
+                </div>
+                <h2 class="add-cargo-h2"><b>Yuk ma'lumotlari</b></h2>
+                <div class="row card-form-row">
+                    <div class="col-lg-5">
+                        <input type="text" list="from-place-data" class="form-control" id="from-place"
+                            placeholder="Yuk xususiyati">
+                        <datalist id="from-place-data">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                        </datalist>
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <input type="text" class="form-control" id="from-place"
+                            placeholder="Yuklash vaqti">
+                    </div>
+                    <div class="col-lg-2 col-sm-6">
+                        <input type="text" class="form-control" id="from-place"
+                            placeholder="Yuklash vaqti">
+                    </div>
+                </div>
+
+                <div class="boshqatrans boshqatranssss row">
+
+                </div>
+                
+                <div class="boshqa_transport_turi">
+                    <a href="#" class="add-field" data-toggle="modal" data-target="#boshqa-transport-turi">
+                        <span class="material-icons-outlined">
+                            add_box
+                        </span>
+                        Qo'shimcha yuklash joyi
+                    </a>
+                      <div class="modal fade"  id="boshqa-transport-turi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title h3" id="exampleModalLongTitle"> Qo'shimcha yuklash joyi</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                           
+                            <div class="modal-body " id="#list-example">
+
+
+                              <form>
+                                <div class="d-block  overlow">
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask " name="qoshish" type="checkbox" value="" id="customCheck1">
+                                    <label class="form-check-label ml-5 chekText " for="customCheck1">lorem-1</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input  mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck2">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck2">lorem-2</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck3">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck3">lorem-3</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck4">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck4">lorem-4</label>  
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck5">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck5">lorem-5</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input  mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck6">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck6">lorem-6</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck7">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck7">lorem-7</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck8">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck8">lorem-8</label>  
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck9">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck9">lorem-9</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input  mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck10">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck10">lorem-10</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck11">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck11">lorem-11</label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask" name="qoshish" type="checkbox" value="" id="customCheck12">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck12">lorem-12</label>  
+                                  </div>
+                                </div>
+                                <div class="modal-footer d-flex flex-column">
+                                  <a class="btn btn-primary btn-block btn-lg qoshimchayuk fonsize ">Save changes</a>
+                                <button type="button" class="btn btn-secondary btn-block btn-lg qoshimchayu fonsize" data-dismiss="modal">Close</button>
+                              </div>
+                               </form>
+                             
+                                 
+                    
+                            </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="yuklashturi yuklashturiRemove row" >
+                </div>
+               
+
+                <div class="yuklash--turi">
+                    <a href="#" class="add-field"  data-toggle="modal"  data-target="#exampleModalLong">
+                        <span class="material-icons-outlined">
+                            add_box
+                        </span>
+                        Yuklash turi
+                    </a>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade"  id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                               
+                                <div class="modal-body  overlow" id="#list-example">
+
+                                    <div class="davriylik d-block">
+                                        <div class="davr ml-3 mb-3 ">
+                                            Davriylik
+                                        </div>
+                                        <div class="d-block">
+                                            <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <label class="form-check-label ml-3" for="inlineRadio1">Doimiy</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <label class="form-check-label ml-3" for="inlineRadio2">Haftalik</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                                <label class="form-check-label ml-3 " for="inlineRadio3">Kunlik</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                                <label class="form-check-label ml-3 " for="inlineRadio4">Kundizi</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input clearr " type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                                <label class="form-check-label ml-3 " for="inlineRadio5">Tozalash</label>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-block">
+                                        <div class="Qoshimchavariantlar ml-3 mb-3">
+                                            Yuklash
+                                        </div>
+                                        <div class="form-check mb-3">
+                                          <input class="form-check-input mt-3  chekTask"   name="inlineRadioOptionsyuk" type="checkbox" value="" id="customCheck123">
+                                          <label class="form-check-label ml-5  chekText" for="customCheck123">
+                                            Yon
+                                          </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                          <input class="form-check-input chekTask  mt-3 " name="inlineRadioOptionsyuk" type="checkbox" value="" id="customCheck123321">
+                                          <label class="form-check-label  chekText ml-5 " for="customCheck123321">
+                                            Yuqori
+                                          </label>
+                                        </div>
+                                        <div class="Qoshimchavariantlar ml-3 mb-3">
+                                          Ulanish Turi
+                                      </div>
+                                      <div class="form-check mb-3">
+                                        <input class="form-check-input mt-3  chekTask" name="inlineRadioOptionsulanish" type="checkbox" value="" id="customCheck321">
+                                        <label class="form-check-label ml-5  chekText" for="customCheck321">
+                                          lorem-1
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-3">
+                                        <input class="form-check-input chekTask  mt-3"  name="inlineRadioOptionsulanish" type="checkbox" value="" id="customCheck3211">
+                                        <label class="form-check-label  chekText ml-5 " for="customCheck3211">
+                                          lorem-2
+                                        </label>
+                                      </div>
+                                      <div class="Qoshimchavariantlar ml-3 mb-3">
+                                        Qo'shimcha variantlar
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask "  name="inlineRadioOptionsvariant" type="checkbox" value="" id="customCheck111">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck111">
+                                        lorem-1
+                                      </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input  mt-3 chekTask"  name="inlineRadioOptionsvariant" type="checkbox" value="" id="customCheck211">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck211">
+                                        lorem-2
+                                      </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask"  name="inlineRadioOptionsvariant" type="checkbox" value="" id="customCheck411">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck411">
+                                        lorem-3
+                                      </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask"  name="inlineRadioOptionsvariant" type="checkbox" value="" id="customCheck55">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck55">
+                                        lorem-4
+                                      </label>  
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input mt-3 chekTask"  name="inlineRadioOptionsvariant" type="checkbox" value="" id="customCheck66">
+                                        <label class="form-check-label ml-5 chekText" for="customCheck66">
+                                            lorem-5
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-3">
+                                        <input class="form-check-input mt-3 chekTask"  name="inlineRadioOptionsvariant" type="checkbox" value="" id="customCheck77">
+                                        <label class="form-check-label ml-5 chekText" for="customCheck77">
+                                            lorem-6
+                                        </label>  
+                                      </div>
+
+                                      </div>                       
+                                </div>
+                                <div class="modal-footer d-flex flex-column">
+                                    <a type="submit" class="btn btn-primary btn-block btn-lg yuklashjoyi fonsize">Save changes</a>
+                                  <button type="button" class="btn btn-secondary btn-block btn-lg fonsize" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                </div>
+
+                <div class="tushurishturi tushurishturiRemove row" >
+                </div>
+
+                <div class="tushirish--turi">
+                     <a href="#" class="add-field"  data-toggle="modal"  data-target="#exampleModalLongg" >
+                    <span class="material-icons-outlined">
+                        add_box
+                    </span>
+                    Tushirish turi
+                </a>
+                        <div class="modal fade"  id="exampleModalLongg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                               
+                                <div class="modal-body  overlow" id="#list-example">
+
+                                    <div class="davriylik d-block">
+                                        <div class="davr ml-3 mb-3 ">
+                                            Davriylik
+                                        </div>
+                                        <div class="d-block">
+                                            <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio133" value="option1">
+                                                <label class="form-check-label ml-3" for="inlineRadio133">Doimiy</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio233" value="option2">
+                                                <label class="form-check-label ml-3" for="inlineRadio233">Haftalik</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input " type="radio" name="inlineRadioOptions1" id="inlineRadio333" value="option3">
+                                                <label class="form-check-label ml-3 " for="inlineRadio333">Kunlik</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input " type="radio" name="inlineRadioOptions1" id="inlineRadio433" value="option4">
+                                                <label class="form-check-label ml-3 " for="inlineRadio433">Kundizi</label>
+                                              </div>
+                                              <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                                <input class="form-check-input clearr " type="radio" name="inlineRadioOptions1" id="inlineRadio533" value="option5">
+                                                <label class="form-check-label ml-3 " for="inlineRadio533">Tozalash</label>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-block">
+                                        <div class="Qoshimchavariantlar ml-3 mb-3">
+                                            Yuklash
+                                        </div>
+                                        <div class="form-check mb-3">
+                                          <input class="form-check-input mt-3  chekTask" name="inlineRadioOptionsyuk1" type="checkbox" value="" id="customCheck12333">
+                                          <label class="form-check-label ml-5  chekText" for="customCheck12333">
+                                            Yon
+                                          </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                          <input class="form-check-input chekTask  mt-3 " name="inlineRadioOptionsyuk1" type="checkbox" value="" id="customCheck12332133">
+                                          <label class="form-check-label  chekText ml-5 " for="customCheck12332133">
+                                            Yuqori
+                                          </label>
+                                        </div>
+                                        <div class="Qoshimchavariantlar ml-3 mb-3">
+                                          Ulanish Turi
+                                      </div>
+                                      <div class="form-check mb-3">
+                                        <input class="form-check-input mt-3  chekTask" name="inlineRadioOptionsulanish1" type="checkbox" value="" id="customCheck32133">
+                                        <label class="form-check-label ml-5  chekText" for="customCheck32133">
+                                          lorem-1
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-3">
+                                        <input class="form-check-input chekTask  mt-3 " name="inlineRadioOptionsulanish1" type="checkbox" value="" id="customCheck321133">
+                                        <label class="form-check-label  chekText ml-5 " for="customCheck321133">
+                                          lorem-2
+                                        </label>
+                                      </div>
+                                      <div class="Qoshimchavariantlar ml-3 mb-3">
+                                        Qo'shimcha variantlar
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask " name="inlineRadioOptionsvariant1" type="checkbox" value="" id="customCheck11133">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck11133">
+                                        lorem-1
+                                      </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input  mt-3 chekTask" name="inlineRadioOptionsvariant1" type="checkbox" value="" id="customCheck21133">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck21133">
+                                        lorem-2
+                                      </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask" name="inlineRadioOptionsvariant1" type="checkbox" value="" id="customCheck41133">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck41133">
+                                        lorem-3
+                                      </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask" name="inlineRadioOptionsvariant1" type="checkbox" value="" id="customCheck5533">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck5533">
+                                        lorem-4
+                                      </label>  
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input mt-3 chekTask" name="inlineRadioOptionsvariant1" type="checkbox" value="" id="customCheck6633">
+                                        <label class="form-check-label ml-5 chekText" for="customCheck6633">
+                                            lorem-5
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-3">
+                                        <input class="form-check-input mt-3 chekTask" name="inlineRadioOptionsvariant1" type="checkbox" value="" id="customCheck7733">
+                                        <label class="form-check-label ml-5 chekText" for="customCheck7733">
+                                            lorem-6
+                                        </label>  
+                                      </div>
+                                      </div>                       
+                                </div>
+                                <div class="modal-footer d-flex flex-column">
+                                    <button type="button" class="btn btn-primary btn-block btn-lg tushrishjoyi fonsize">Save changes</button>
+                                  <button type="button" class="btn btn-secondary btn-block btn-lg fonsize" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                </div>
+
+
+                <h2 class="add-cargo-h2"><b>Transport. Dokumentlar</b></h2>
+                <div class="row card-form-row">
+                      <div class="mashina_turi col-lg-6 ">
+                       <div class="position-relative d-flex">
+                        <input type="text" list="from-place-data" class="form-control" id="from-place"
+                            placeholder="Transport turi">
+                        <datalist id="from-place-data">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                        </datalist>
+                        <!-- <a href="#"><i class="fas fa-trash-alt text-danger position-absolute mt-4 ml-2 "></i></a> -->
+                    </div>
+
+                  </div>
+                    
+                    <div class="col-lg-1">
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="text" class="form-control" id="from-place"
+                            placeholder="Mashina soni" value="1">
+                    </div>
+                </div>
+                    <a href="#" class="add-field add-field3">
+                        <span class="material-icons-outlined">
+                            add_box
+                        </span>
+                        Boshqa transport turi
+                    </a>
+
+                    <div id="hajmdichiqarish" class=" row removehajm"></div>
+                <div class="hajmi ">
+                  <a href="#" class="add-field  " data-toggle="modal" data-target="#exampleModalCenter">
+                    <span class="material-icons-outlined">
+                        add_box
+                    </span>
+                    Kengligi
+                </a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle  "><h3>Kengligi</h3></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="uzuntog">
+                                <div class="form-group input-group-lg position-relative mb-5">
+                                  <input type="number" class="form-control " placeholder="Uzunligi.m" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group input-group-lg mb-5 position-relative">
+                                    <input type="number" class="form-control" id="exampleInputEmail2" placeholder="Balandlik" aria-describedby="emailHelp">
+                                  </div>
+                                  <div class="form-group input-group-lg mb-5 position-relative">
+                                    <input type="number" class="form-control" id="exampleInputEmail3" placeholder="Eni" aria-describedby="emailHelp">
+                                  </div>
+
+                                   <div class="modal-footer d-block">
+                                  <button type="submit" class="btn btn-primary mb-3 btn-block fonsize " ><h3>Save changes</h3></button>
+                                  <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal"><h3>Close</h3></button>
+                                  </div>
+                              </form>
+                               
+                        </div>
+                       
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="document">
+                  <div class="docum  row documRemove">
+                  </div>
+                    <a href="#" class="add-field"  data-toggle="modal" data-target="#hujjat">
+                        <span class="material-icons-outlined">
+                            add_box
+                        </span>
+                        Dokumentlar
+                    </a>
+                    <!-- Button trigger modal -->
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hujjat">
+                        Launch demo modal
+                    </button> -->
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="hujjat" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask " name="hujjatlar" type="checkbox" value="" id="customCheck80">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck80">
+                                      lorem-1
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input  mt-3 chekTask"  name="hujjatlar" type="checkbox" value="" id="customCheck81">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck81">
+                                      lorem-2
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask"  name="hujjatlar" type="checkbox" value="" id="customCheck82">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck82">
+                                      lorem-3
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input mt-3 chekTask"  name="hujjatlar" type="checkbox" value="" id="customCheck83">
+                                    <label class="form-check-label ml-5 chekText" for="customCheck83">
+                                      lorem-4
+                                    </label>  
+                                  </div>
+                                  <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask"  name="hujjatlar" type="checkbox" value="" id="customCheck84">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck84">
+                                          lorem-5
+                                      </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                      <input class="form-check-input mt-3 chekTask "  name="hujjatlar" type="checkbox" value="" id="customCheck85">
+                                      <label class="form-check-label ml-5 chekText" for="customCheck85">
+                                          lorem-6
+                                      </label>  
+                                    </div>
+                            </div>
+                            <div class="modal-footer d-block">
+                              <button type="button" class="btn btn-primary btn-block documentlar fonsize ">Save changes</button>
+                              <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="add-cargo-h2"><b>Narxi</b></h2>
+                <div class="row card-form-row">
+                    <div class="col-lg-2">
+                        <input type="text" class="form-control" placeholder="naqt">
+                    </div>
+                    <div class="col-lg-2">
+                      <input type="text"  class="form-control" list="to-place-data"
+                          placeholder="valyuta">
+                      <datalist id="to-place-data">
+                          <option value="1">
+                          <option value="2">
+                          <option value="3">
+                      </datalist>
+                  </div> 
+                    <div class="col-lg-2">
+                      <input type="text" class="form-control" id="from-date" placeholder="to`lov_sanasi"
+                          onfocus="this.type='date'">
+                  </div>
+                </div>
+                
+                <div class="tolovlarquti row removetolov">
+
+                </div>
+                <div class="tolvTuri">
+                  <a href="#" class="add-field"  data-target="#exampleModalScrollable" data-toggle="modal">
+                    <span class="material-icons-outlined">
+                        add_box
+                    </span>
+                    To'lov turi
+                </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalScrollableTitle">To'lov turi</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-block">
+                                <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio112" value="option1">
+                                    <label class="form-check-label ml-3" for="inlineRadio112">lorem-1</label>
+                                  </div>
+                                  <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio212" value="option2">
+                                    <label class="form-check-label ml-3" for="inlineRadio212">lorem-2</label>
+                                  </div>
+                                  <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                    <input class="form-check-input " type="radio" name="inlineRadio" id="inlineRadio312" value="option3">
+                                    <label class="form-check-label ml-3 " for="inlineRadio312">lorem-3</label>
+                                  </div>
+                                  <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                    <input class="form-check-input " type="radio" name="inlineRadio" id="inlineRadio412" value="option4">
+                                    <label class="form-check-label ml-3 " for="inlineRadio412">lorem-4</label>
+                                  </div>
+                                  <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                    <input class="form-check-input " type="radio" name="inlineRadio" id="inlineRadio512" value="option3">
+                                    <label class="form-check-label ml-3 " for="inlineRadio512">lorem-5</label>
+                                  </div>
+                                  <div class="form-check form-check-inline d-block ml-3 mb-3">
+                                    <input class="form-check-input " type="radio" name="inlineRadio" id="inlineRadio612" value="option4">
+                                    <label class="form-check-label ml-3 " for="inlineRadio612">lorem-6</label>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-block">
+                          <button type="submit" class="btn btn-primary mb-3 btn-block tolovbos fonsize " >Save changes</button>
+                          <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal">Close</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                
+                <h2 class="add-cargo-h2"><b>Kontakt</b></h2>
+                <div class="row card-form-row">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" placeholder="name@example.com">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" placeholder="name@example.com">
+                    </div>
+                </div>
+
+                <div class="qoshimchakantaklarniyigish row kantakremove">
+
+                </div>
+
+                <div class="qoshimchakantak">
+                  <a href="#" class="add-field" data-toggle="modal" data-target="#exampleModalScrollable3232">
+                    <span class="material-icons-outlined">
+                        add_box
+                    </span>
+                    Qo'shimcha kontakt
+                </a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalScrollable3232" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalScrollableTitle">Qo`shimcha kantak</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="kantaksum" >
+                            <div class="form-group input-group-lg position-relative mb-5">
+                              <input type="text" class="form-control " placeholder="Telegram" id="exampleInputEmail178" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group input-group-lg mb-5 position-relative">
+                                <input type="text" class="form-control" id="exampleInputEmail278" placeholder="Whatsapp" aria-describedby="emailHelp">
+                              </div>
+                              <div class="form-group input-group-lg mb-5 position-relative">
+                                <input type="text" class="form-control" id="exampleInputEmail378" placeholder="Viber" aria-describedby="emailHelp">
+                              </div>
+                              <div class="modal-footer d-block">
+                                <button type="submit" class="btn btn-primary mb-3 btn-block fonsize " >Save changes</button>
+                                <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal">Close</button>
+                                </div>
+                          </form>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <a href="#" class="add-field">
+                    <span class="material-icons-outlined">
+                        add_box
+                    </span>
+                    Ishchi kontaktini qo'shish
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <ul class="footer-nav-list">
+            <li class="footer-nav-list-item">
+                <a href="my_cargo.html">
+                    <span class="material-icons-outlined">
+                        work_outline
+                    </span>
+                    Mening yuklarim
+                </a>
+            </li>
+            <li class="footer-nav-list-item active">
+                <a href="add_cargo.html">
+                    <span class="material-icons-outlined">
+                        medical_services
+                    </span>
+                    Yuk qo'shish
+                </a>
+            </li>
+            <li class="footer-nav-list-item">
+                <a href="#">
+                    <span class="material-icons-outlined">
+                        calculate
+                    </span>
+                    Masofani hisoblash
+                </a>
+            </li>
+            <li class="footer-nav-list-item">
+                <a href="settings.html">
+                    <span class="material-icons-outlined">
+                        manage_accounts
+                    </span>
+                    Sozlamalar
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+light-color=1884cc
+dark-color=12649b
+a active = rgb(214, 214, 214)

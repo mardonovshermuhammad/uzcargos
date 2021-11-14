@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/my_style.css">
+    <link rel="stylesheet" href="css/asidde_style.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="my-navbar">
+        <div class="my-navbar__content">
+            <div class="nav__title">
+                Sozlamalar
+            </div>
+            <ul class="my-navbar__actions">
+                <li class="my-navbar-items"><button type="button" class="my-btn"><span class="material-icons-outlined">
+                            add_ic_call
+                        </span>Yordam<span class="material-icons-outlined">
+                            keyboard_arrow_down
+                        </span></button></li>
+                <li class="my-navbar-items">
+                    <img class="lan" id="uz" src="images/flags/uzbekistan.png" alt="Uz">
+                    <img class="lan" id="ru" src="images/flags/russia.png" alt="Rus">
+                </li>
+                <li class="my-navbar-items">Axror Jo'rayev <i>owner</i></li>
+                <li class="my-navbar-items">
+                    <a href="#">
+                        Chiqish<span class="material-icons-outlined">
+                            logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="my-hidden-navbar__actions">
+                <li class="my-navbar-items"><button type="button" class="my-btn"><span class="material-icons-outlined">
+                            add_ic_call
+                        </span></button></li>
+                <li class="my-navbar-items">
+                    <img class="lan" id="langs" src="images/flags/lang.jpg" alt="Uz">
+                </li>
+                <li class="my-navbar-items">Axror Jo'rayev <i>owner</i></li>
+                <li class="my-navbar-items">
+                    <a href="#">
+                        Chiqish<span class="material-icons-outlined">
+                            logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="my-third-hidden-navbar__actions">
+                <li class="my-navbar-items"><button type="button" class="my-btn"><span class="material-icons-outlined">
+                            add_ic_call
+                        </span></button></li>
+                <li class="my-navbar-items">
+                    <img class="lan" id="langs" src="images/flags/lang.jpg" alt="Uz">
+                </li>
+                <li class="my-navbar-items">
+                    <img src="images/sender.png" alt="Sender">
+                    </i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <aside class="aside">
+        <div class="top-logo-side">
+            <p class="visible-logo">Uz Car<b>go</b>s</p>
+            <p class="hidden-logo"><b>GO</b></p>
+        </div>
+
+        <div class="aside-nav">
+            <a href="#" class="aside-status-side">
+                <img src="images/sender.png" alt="Sender">
+                <h4>Jo'natuvchi</h4>
+                <p>Statusni o'zgartirish</p>
+            </a>
+
+            <ul class="aside-list">
+                <li class="aside-list-items">
+                    <a href="my_cargo.html">
+                        <span class="material-icons-outlined">
+                            work_outline
+                        </span>
+                        Mening yuklarim
+                    </a>
+                </li>
+                <li class="aside-list-items">
+                    <a href="add_cargo.html">
+                        <span class="material-icons-outlined">
+                            medical_services
+                        </span>
+                        Yuk qo'shish
+                    </a>
+                </li>
+                <li class="aside-list-items">
+                    <a href="#">
+                        <span class="material-icons-outlined">
+                            calculate
+                        </span>
+                        Masofani hisoblash
+                    </a>
+                </li>
+                <li class="aside-list-items active">
+                    <a href="settings.html">
+                        <span class="material-icons-outlined">
+                            manage_accounts
+                        </span>
+                        Sozlamalar
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="main">
+        <div class="settings-section">
+            <div class="row s-card">
+                <a href="#" class="card col settings-card">
+                    <span class="material-icons-outlined">
+                        people
+                    </span>
+                    <h2>Xodimlar</h2>
+                </a>
+                <a href="#" class="card col settings-card">
+                    <span class="material-icons-outlined">
+                        contact_phone
+                    </span>
+                    <h2>Profil</h2>
+                </a>
+                <a href="#" class="card col settings-card">
+                    <span class="material-icons-outlined">
+                        ring_volume
+                    </span>
+                    <h2>Nomerni o'zgartirish</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <ul class="footer-nav-list">
+            <li class="footer-nav-list-item">
+                <a href="my_cargo.html">
+                    <span class="material-icons-outlined">
+                        work_outline
+                    </span>
+                    Mening yuklarim
+                </a>
+            </li>
+            <li class="footer-nav-list-item">
+                <a href="add_cargo.html">
+                    <span class="material-icons-outlined">
+                        medical_services
+                    </span>
+                    Yuk qo'shish
+                </a>
+            </li>
+            <li class="footer-nav-list-item">
+                <a href="#">
+                    <span class="material-icons-outlined">
+                        calculate
+                    </span>
+                    Masofani hisoblash
+                </a>
+            </li>
+            <li class="footer-nav-list-item active">
+                <a href="settings.html">
+                    <span class="material-icons-outlined">
+                        manage_accounts
+                    </span>
+                    Sozlamalar
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
