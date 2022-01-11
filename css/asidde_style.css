@@ -403,7 +403,7 @@ a.card-cargo-search:hover {
 } 
 
 a.settings-card {
-    min-width: 370px;
+    min-width: 300px;
     height: 250px;
     margin: 5px;
     display: flex;

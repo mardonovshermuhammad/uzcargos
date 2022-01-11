@@ -50,6 +50,12 @@ input[type=radio]:checked ~ label{
 .fonsize{
   font-size: 16px;
 }
+@media only screen and (max-width: 768px) {
+  .add-cargo-form{
+  padding: 10px;
+}
+}
+
 
 
    
@@ -165,6 +171,7 @@ input[type=radio]:checked ~ label{
     </aside>
 
     <div class="main">
+      <form class="jonatish">
         <div class="add-cargo-form">
             <div class="card add-card">
                 <h2 class="add-cargo-h2"><b>Yo'nalish</b></h2>
@@ -172,11 +179,11 @@ input[type=radio]:checked ~ label{
                 <div class="row card-form-row">
                     <div class="col-lg-2">
                         <input type="text" class="form-control" id="from-date" placeholder="Yuklash vaqti"
-                            onfocus="this.type='date'">
+                            onfocus="this.type='date'" required>
                     </div>
                     <div class="col-lg-2">
                         <input type="text" class="form-control" id="to-date" placeholder="Yetkazish vaqti"
-                            onfocus="this.type='date'">
+                            onfocus="this.type='date'" required>
                     </div>
                 </div>
                 <div class="row card-form-row">
@@ -185,17 +192,10 @@ input[type=radio]:checked ~ label{
                         <div class="additional">
                             <div class="input-div" style="position: relative;">
                                 <input type="text"  class="form-control" id="from-place"
-                               placeholder="Yuklash vaqti">
-                           <!-- <datalist id="from-place-data">
-                               list="from-place-data"
-                              <option value="1">
-                              <option value="2">
-                              <option value="3">
-                          </datalist> -->
-                          <!-- <a href="#"><i class="fas fa-trash-alt text-danger" style="position: absolute; top: 10px; right: 10px;"></i></a> -->
+                               placeholder="Yuklash vaqti" required>
                             </div>
                         </div>
-                        <a href="#" class="add-field">
+                        <a href="#" class="add-field" required>
                             <span class="material-icons-outlined">
                                 add_box
                             </span>
@@ -207,14 +207,7 @@ input[type=radio]:checked ~ label{
                         <div class="additional2">
                             <div class="input-div2" style="position: relative;">
                                 <input type="text"  class="form-control" id="to-place"
-                                    placeholder="Yuklash vaqti">
-                                <!-- <datalist id="to-place-data">
-                                    list="to-place-data"
-                                    <option value="1">
-                                    <option value="2">
-                                    <option value="3">
-                                </datalist> -->
-                                <!-- <a href="#"><i class="fas fa-trash-alt text-danger" style="position: absolute; top: 10px; right: 10px;"></i></a> -->
+                                    placeholder="Yuklash vaqti" required>
                             </div> 
                         </div>
                         <a href="#" class="add-field2 add-field ">
@@ -229,7 +222,7 @@ input[type=radio]:checked ~ label{
                 <div class="row card-form-row">
                     <div class="col-lg-5">
                         <input type="text" list="from-place-data" class="form-control" id="from-place"
-                            placeholder="Yuk xususiyati">
+                            placeholder="Yuk xususiyati"required>
                         <datalist id="from-place-data">
                             <option value="1">
                             <option value="2">
@@ -238,11 +231,11 @@ input[type=radio]:checked ~ label{
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <input type="text" class="form-control" id="from-place"
-                            placeholder="Yuklash vaqti">
+                            placeholder="Yuklash vaqti" required>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <input type="text" class="form-control" id="from-place"
-                            placeholder="Yuklash vaqti">
+                            placeholder="Yuklash vaqti" required>
                     </div>
                 </div>
 
@@ -251,7 +244,7 @@ input[type=radio]:checked ~ label{
                 </div>
                 
                 <div class="boshqa_transport_turi">
-                    <a href="#" class="add-field" data-toggle="modal" data-target="#boshqa-transport-turi">
+                    <a href="#" class="add-field" data-toggle="modal" data-target="#boshqa-transport-turi" required>
                         <span class="material-icons-outlined">
                             add_box
                         </span>
@@ -322,7 +315,7 @@ input[type=radio]:checked ~ label{
                                   </div>
                                 </div>
                                 <div class="modal-footer d-flex flex-column">
-                                  <a class="btn btn-primary btn-block btn-lg qoshimchayuk fonsize ">Save changes</a>
+                                  <a data-dismiss="modal" class="btn btn-primary btn-block btn-lg qoshimchayuk fonsize ">Save changes</a>
                                 <button type="button" class="btn btn-secondary btn-block btn-lg qoshimchayu fonsize" data-dismiss="modal">Close</button>
                               </div>
                                </form>
@@ -462,7 +455,7 @@ input[type=radio]:checked ~ label{
                                       </div>                       
                                 </div>
                                 <div class="modal-footer d-flex flex-column">
-                                    <a type="submit" class="btn btn-primary btn-block btn-lg yuklashjoyi fonsize">Save changes</a>
+                                    <a type="submit" data-dismiss="modal" class="btn btn-primary btn-block btn-lg yuklashjoyi fonsize">Save changes</a>
                                   <button type="button" class="btn btn-secondary btn-block btn-lg fonsize" data-dismiss="modal">Close</button>
                                 </div>
                               </div>
@@ -592,7 +585,7 @@ input[type=radio]:checked ~ label{
                                       </div>                       
                                 </div>
                                 <div class="modal-footer d-flex flex-column">
-                                    <button type="button" class="btn btn-primary btn-block btn-lg tushrishjoyi fonsize">Save changes</button>
+                                    <button data-dismiss="modal" type="button" class="btn btn-primary btn-block btn-lg tushrishjoyi fonsize">Save changes</button>
                                   <button type="button" class="btn btn-secondary btn-block btn-lg fonsize" data-dismiss="modal">Close</button>
                                 </div>
                               </div>
@@ -606,7 +599,7 @@ input[type=radio]:checked ~ label{
                       <div class="mashina_turi col-lg-6 ">
                        <div class="position-relative d-flex">
                         <input type="text" list="from-place-data" class="form-control" id="from-place"
-                            placeholder="Transport turi">
+                            placeholder="Transport turi" required>
                         <datalist id="from-place-data">
                             <option value="1">
                             <option value="2">
@@ -631,9 +624,10 @@ input[type=radio]:checked ~ label{
                         Boshqa transport turi
                     </a>
 
-                    <div id="hajmdichiqarish" class=" row removehajm"></div>
-                <div class="hajmi ">
-                  <a href="#" class="add-field  " data-toggle="modal" data-target="#exampleModalCenter">
+                    <div id="hajmdichiqarish" class=" row removehajm">
+                    </div>
+                <div class="hajmi">
+                  <a href="#" class="add-field" data-toggle="modal" data-target="#exampleModalCenter">
                     <span class="material-icons-outlined">
                         add_box
                     </span>
@@ -651,19 +645,19 @@ input[type=radio]:checked ~ label{
                         </button>
                         </div>
                         <div class="modal-body">
-                            <form id="uzuntog">
+                            <form >
                                 <div class="form-group input-group-lg position-relative mb-5">
-                                  <input type="number" class="form-control " placeholder="Uzunligi.m" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="number" class="form-control " placeholder="Uzunligi.m" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
                                 </div>
                                 <div class="form-group input-group-lg mb-5 position-relative">
-                                    <input type="number" class="form-control" id="exampleInputEmail2" placeholder="Balandlik" aria-describedby="emailHelp">
+                                    <input type="number" class="form-control" id="exampleInputEmail2" placeholder="Balandlik" aria-describedby="emailHelp" autocomplete="off">
                                   </div>
                                   <div class="form-group input-group-lg mb-5 position-relative">
-                                    <input type="number" class="form-control" id="exampleInputEmail3" placeholder="Eni" aria-describedby="emailHelp">
+                                    <input type="number" class="form-control" id="exampleInputEmail3" placeholder="Eni" aria-describedby="emailHelp" autocomplete="off">
                                   </div>
 
                                    <div class="modal-footer d-block">
-                                  <button type="submit" class="btn btn-primary mb-3 btn-block fonsize " ><h3>Save changes</h3></button>
+                                  <button id="uzuntog" type="submit" data-dismiss="modal" class="btn btn-primary mb-3 btn-block fonsize " ><h3>Save changes</h3></button>
                                   <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal"><h3>Close</h3></button>
                                   </div>
                               </form>
@@ -684,10 +678,6 @@ input[type=radio]:checked ~ label{
                         </span>
                         Dokumentlar
                     </a>
-                    <!-- Button trigger modal -->
-                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hujjat">
-                        Launch demo modal
-                    </button> -->
                     
                     <!-- Modal -->
                     <div class="modal fade" id="hujjat" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
@@ -738,7 +728,7 @@ input[type=radio]:checked ~ label{
                                     </div>
                             </div>
                             <div class="modal-footer d-block">
-                              <button type="button" class="btn btn-primary btn-block documentlar fonsize ">Save changes</button>
+                              <button type="button" data-dismiss="modal" class="btn btn-primary btn-block documentlar fonsize ">Save changes</button>
                               <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal">Close</button>
                             </div>
                         </div>
@@ -748,11 +738,11 @@ input[type=radio]:checked ~ label{
                 <h2 class="add-cargo-h2"><b>Narxi</b></h2>
                 <div class="row card-form-row">
                     <div class="col-lg-2">
-                        <input type="text" class="form-control" placeholder="naqt">
+                        <input type="text" class="form-control" placeholder="naqt" required>
                     </div>
                     <div class="col-lg-2">
                       <input type="text"  class="form-control" list="to-place-data"
-                          placeholder="valyuta">
+                          placeholder="valyuta" required>
                       <datalist id="to-place-data">
                           <option value="1">
                           <option value="2">
@@ -761,7 +751,7 @@ input[type=radio]:checked ~ label{
                   </div> 
                     <div class="col-lg-2">
                       <input type="text" class="form-control" id="from-date" placeholder="to`lov_sanasi"
-                          onfocus="this.type='date'">
+                          onfocus="this.type='date'" required>
                   </div>
                 </div>
                 
@@ -814,7 +804,7 @@ input[type=radio]:checked ~ label{
                             </div>
                         </div>
                         <div class="modal-footer d-block">
-                          <button type="submit" class="btn btn-primary mb-3 btn-block tolovbos fonsize " >Save changes</button>
+                          <button type="submit" data-dismiss="modal" class="btn btn-primary mb-3 btn-block tolovbos fonsize " >Save changes</button>
                           <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal">Close</button>
                           </div>
                       </div>
@@ -828,10 +818,10 @@ input[type=radio]:checked ~ label{
                 <h2 class="add-cargo-h2"><b>Kontakt</b></h2>
                 <div class="row card-form-row">
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="name@example.com">
+                        <input type="text" class="form-control" placeholder="name@example.com" required>
                     </div>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="name@example.com">
+                        <input type="text" class="form-control" placeholder="name@example.com" required>
                     </div>
                 </div>
 
@@ -857,9 +847,9 @@ input[type=radio]:checked ~ label{
                           </button>
                         </div>
                         <div class="modal-body">
-                          <form class="kantaksum" >
+                          <form class="" >
                             <div class="form-group input-group-lg position-relative mb-5">
-                              <input type="text" class="form-control " placeholder="Telegram" id="exampleInputEmail178" aria-describedby="emailHelp">
+                              <input type="text" class="form-control"  placeholder="Telegram" id="exampleInputEmail178" aria-describedby="emailHelp" autocomplete="off">
                             </div>
                             <div class="form-group input-group-lg mb-5 position-relative">
                                 <input type="text" class="form-control" id="exampleInputEmail278" placeholder="Whatsapp" aria-describedby="emailHelp">
@@ -868,8 +858,8 @@ input[type=radio]:checked ~ label{
                                 <input type="text" class="form-control" id="exampleInputEmail378" placeholder="Viber" aria-describedby="emailHelp">
                               </div>
                               <div class="modal-footer d-block">
-                                <button type="submit" class="btn btn-primary mb-3 btn-block fonsize " >Save changes</button>
-                                <button type="button" class="btn btn-secondary btn-block fonsize" data-dismiss="modal">Close</button>
+                                <button type="submit" data-dismiss="modal" class="btn btn-primary mb-3 btn-block kantaksum fonsize " >Save changes</button>
+                                <button type="button" class="btn btn-secondary btn-block fonsize " data-dismiss="modal">Close</button>
                                 </div>
                           </form>
                         </div>
@@ -886,7 +876,11 @@ input[type=radio]:checked ~ label{
                     Ishchi kontaktini qo'shish
                 </a>
             </div>
+           <div class=" d-flex justify-content-end">
+            <button type="submit" style="font-size: 20px;" class="btn btn-primary px-5 py-2 my-3  ">Saqlash</button>
+           </div>
         </div>
+    </form> 
     </div>
 
     <footer class="footer">

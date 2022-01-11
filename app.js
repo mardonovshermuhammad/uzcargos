@@ -36,10 +36,10 @@ const addTask = document.querySelector(".add-field"),
   tolovlarquti = document.querySelector(".tolovlarquti"),
   kantaksum = document.querySelector(".kantaksum"),
   qoshimchakantaklarniyigish = document.querySelector(".qoshimchakantaklarniyigish"),
-  closeQy = document.querySelector(".closeQy");
+  closeQy = document.querySelector(".closeQy"),
+  jonatish = document.querySelector(".jonatish");
 
-  uzunTog.addEventListener("submit", function (e) {
-   e.preventDefault();
+  uzunTog.addEventListener("click", function (e) {
 
    document.querySelectorAll('.hajmremove').forEach(function (taskItem) {
     taskItem.remove();
@@ -101,7 +101,7 @@ const addTask = document.querySelector(".add-field"),
    
   
   })
-  kantaksum.addEventListener("submit", function (e) {
+  kantaksum.addEventListener("click", function (e) {
     e.preventDefault();
     document.querySelectorAll('.hajmremove').forEach(function (taskItem) {
       taskItem.remove();
@@ -163,13 +163,7 @@ const addTask = document.querySelector(".add-field"),
 addTask.addEventListener("click", function (e) {
   let addTask = `<div class="input-div" style="position: relative;">
     <input type="text"  class="form-control" id="from-place"
-   placeholder="Yuklash vaqti">
-<!-- <datalist id="from-place-data">
-   list="from-place-data"
-  <option value="1">
-  <option value="2">
-  <option value="3">
-</datalist> -->
+   placeholder="Yuklash vaqti" required>
 <a href="#"><i class="fas fa-trash-alt text-danger" style="position: absolute; top: 10px; right: 10px;"></i></a>
 </div>`;
   additional.insertAdjacentHTML("beforeend", addTask);
@@ -178,13 +172,7 @@ addTask.addEventListener("click", function (e) {
 addTask2.addEventListener("click", function (e) {
   let addTask = `<div class="input-div2" style="position: relative;">
     <input type="text"  class="form-control" id="to-place"
-        placeholder="Yuklash vaqti">
-    <!-- <datalist id="to-place-data">
-        list="to-place-data"
-        <option value="1">
-        <option value="2">
-        <option value="3">
-    </datalist> -->
+        placeholder="Yuklash vaqti" required>
     <a href="#"><i class="fas fa-trash-alt text-danger" style="position: absolute; top: 10px; right: 10px;"></i></a>
 </div> `;
   additional2.insertAdjacentHTML("beforeend", addTask);
@@ -586,3 +574,6 @@ kantakremove.addEventListener("click", function (e) {
     e.target.parentElement.parentElement.parentElement.remove();
   }
 });
+jonatish.addEventListener("submit", function (e) {
+  e.preventDefault();
+})
